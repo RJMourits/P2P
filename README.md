@@ -17,4 +17,4 @@ The algorithm doesn't filter matches. For filtering we suggest a stepwise approa
 - Rule-based filters
 - Probabilistic filter
 
-**Mourits, R.J. & Rosenbaum-Feldbrügge, M. (2022). __Property to Person__. https://github.com/RJMourits/P2P**
+Mourits, R.J. & Rosenbaum-Feldbrügge, M. (2022). _Property to Person_. https://github.com/RJMourits/P2P
