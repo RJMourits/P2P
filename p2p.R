@@ -26,6 +26,8 @@
   ####   Mourits, R.J. & Rosenbaum-Feldbrügge, M. (2022). Property to Person. https://github.com/RJMourits/P2P  ####
  ####################################################################################################################
   
+  library("stringdist")
+ 
   match_property <- function(df1, df2, lev_dist_name, adaptive="yes"){
     
    #### step 1: determine Levenshtein distance for all Name combinations ####
@@ -52,7 +54,7 @@
         Slave_names_matched <- l
       }
      #repeat loop until max LEV_DIST_Name is reached, then break
-      if(x==lev_dist_Name) {
+      if(x==lev_dist_name) {
         break
       }
      #prepare repeat
@@ -64,7 +66,7 @@
     if(adaptive=="yes"){
       Slave_names_matched <- Slave_names_matched[nchar(Slave_names_matched$Name_1)>=2 & nchar(Slave_names_matched$Name_1)<=3 & stringdist(Slave_names_matched$Name_1, Slave_names_matched$Name_2)<=1 |
                                                    nchar(Slave_names_matched$Name_1)>=4 & nchar(Slave_names_matched$Name_1)<=8 & stringdist(Slave_names_matched$Name_1, Slave_names_matched$Name_2)<=2 |
-                                                   nchar(Slave_names_matched$Name_1)>=9 & stringdist(Slave_names_matched$Name_1, Slave_names_matched$Name_2)<=lev_dist_Name, ]
+                                                   nchar(Slave_names_matched$Name_1)>=9 & stringdist(Slave_names_matched$Name_1, Slave_names_matched$Name_2)<=lev_dist_name, ]
     }
    #clean environment
     rm(l, LV_matrix, Slave_names_1, Slave_names_2, x)
@@ -73,16 +75,15 @@
    #### step 2: select relevant columns in data frames ####
    #rename variables df1
     df1 <- df1[,c("IDNR", "Name")]
-    colnames(df1) <- c("IDNR", "Name_1")
+    colnames(df1) <- paste(colnames(df1), 1, sep="_")
    #rename variables df2
     df2 <- df2[,c("IDNR", "Name")]
-    colnames(df2) <- c("IDNR", "Name_2")
+    colnames(df2) <- paste(colnames(df2), 2, sep="_")
     
    #add df1 and df2 to SLAVE_NAMES_MATCHED
     df_matched <- merge(df1, Slave_names_matched, by="Name_1", all.x=T, allow.cartesian=T)
     df_matched <- merge(df_matched, df2, by="Name_2", all=F, allow.cartesian=T)
-    df_matched
+    df_matched[, c("IDNR_1", "IDNR_2", "Name_1", "Name_2", "Name_lv")]
   }
-  
   
   
