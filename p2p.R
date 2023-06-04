@@ -15,8 +15,7 @@
   ####    - The maximum Levenshtein distance                                                                    ####
   ####    - Whether to use an adaptive Levenshtein distance                                                     ####
   ####                                                                                                          ####
-  ####  The algorithm doesn't filter matches. For filtering                                                     ####
-  ####  we suggest a stepwise approach containing                                                               ####
+  ####  The algorithm doesn't filter matches. For filtering we suggest a stepwise approach containing           ####
   ####    - Rule-based filters                                                                                  ####
   ####    - Probabilistic filter                                                                                ####
   ####                                                                                                          ####
