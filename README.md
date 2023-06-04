@@ -18,4 +18,5 @@ The algorithm doesn't filter matches. For filtering we suggest a stepwise approa
 
 For an implementation of PROPERTY TO PERSON see: https://github.com/HDSC-Nijmegen/Slavenregisters
 
-Cite as: Mourits, R.J. & Rosenbaum-Feldbrügge, M. (2022). Property to Person. https://github.com/RJMourits/P2P
+Cite as: 
+Mourits, R.J. & Rosenbaum-Feldbrügge, M. (2022). Property to Person. https://github.com/RJMourits/P2P
