@@ -1,4 +1,5 @@
-This script matches records based on first names
+This script matches records based on first names. For an implementation of PROPERTY TO PERSON see: https://github.com/HDSC-Nijmegen/Slavenregisters
+
 The matching algorithm requires:
 - "R", tested under version 4
 - The "stringdist" library by Van der Loo
