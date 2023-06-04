@@ -1,7 +1,4 @@
-This script matches records based on first names. The algorithm doesn't filter matches. For filtering we suggest a stepwise approach containing
-- Rule-based filters
-- Probabilistic filter
-For an implementation of see: https://github.com/HDSC-Nijmegen/Slavenregisters
+This script matches records based on first names. 
 
 The matching algorithm requires:
 - "R", tested under version 4
@@ -20,4 +17,4 @@ The algorithm doesn't filter matches. For filtering we suggest a stepwise approa
 - Rule-based filters
 - Probabilistic filter
 
-#Mourits, R.J. & Rosenbaum-Feldbrügge, M. (2022). Property to Person. https://github.com/RJMourits/P2P
+**Mourits, R.J. & Rosenbaum-Feldbrügge, M. (2022). __Property to Person__. https://github.com/RJMourits/P2P**
