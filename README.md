@@ -1,20 +1,20 @@
+Mourits, R.J. & Rosenbaum-Feldbrügge, M. (2022). _Property to Person_. https://github.com/RJMourits/P2P
+
 This script matches records based on first names. 
 
 The matching algorithm requires:
-- "R", tested under version 4
-- The "stringdist" library by Van der Loo
+- _"R", tested under version 4_
+- _The "stringdist" library by Van der Loo_
 
 After installing match_property requires:
-- Two data frames
-- containing a primary key titled "IDNR"
-- and a variable with first names titled "Name"
+- _Two data frames_
+- _containing a primary key titled "IDNR"_
+- _and a variable with first names titled "Name"_
 
 The user can adjust:
-- The maximum Levenshtein distance
-- Whether to use an adaptive Levenshtein distance
+- _The maximum Levenshtein distance_
+- _Whether to use an adaptive Levenshtein distance_
 
 The algorithm doesn't filter matches. For filtering we suggest a stepwise approach containing
-- Rule-based filters
-- Probabilistic filter
-
-Mourits, R.J. & Rosenbaum-Feldbrügge, M. (2022). _Property to Person_. https://github.com/RJMourits/P2P
+- _Rule-based filters_
+- _Probabilistic filter_
